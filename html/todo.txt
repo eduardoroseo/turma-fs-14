@@ -43,11 +43,10 @@ Aprender sobre:
     <input type="tel">
     <input type="text">
     <input type="url">
-- Textarea
-- Criar um site empresarial ou página pessoal
-- Responsividade
-
 
 CSS:
 - Estilizar tags
 - Estilizar com id e classes
+
+
+- Criar um site empresarial ou página pessoal

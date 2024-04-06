@@ -1,0 +1,25 @@
+p {
+    color: gray;
+}
+
+#preferido {
+    color: brown;
+}
+
+.titulos {
+    font-size: 30px;
+    color: rgb(8, 16, 255);
+    font-weight: 700;
+}
+
+.subtitulos {
+    color: rgb(0, 135, 238);
+}
+
+.titulos:hover {
+    color: brown;
+}
+
+#titulo-form {
+    font-size: 20px;
+}
