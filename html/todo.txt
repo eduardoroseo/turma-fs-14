@@ -1,0 +1,16 @@
+Aprender sobre:
+- Estrutura padrão (Document type, lang, headers, etc) - ok
+- Cabeçalho - ok
+- Body - ok 
+- Títulos - ok
+- Parágrafos - ok
+- Strong - ok
+
+
+- Listas ordenadas e não ordenadas
+- Tabelas
+
+
+CSS:
+- Estilizar tags
+- Estilizar com id e classes
