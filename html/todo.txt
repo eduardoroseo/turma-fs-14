@@ -1,14 +1,51 @@
 Aprender sobre:
-- Estrutura padrão (Document type, lang, headers, etc) - ok
-- Cabeçalho - ok
-- Body - ok 
-- Títulos - ok
-- Parágrafos - ok
-- Strong - ok
-
+- Estrutura padrão (Document type, lang, headers, etc)
+- Cabeçalho
+- Body
+- Títulos
+- Parágrafos
+- Strong
 
 - Listas ordenadas e não ordenadas
 - Tabelas
+- Criação de formulários:
+    <input>
+    <label>
+    <select>
+    <textarea>
+    <button>
+    <fieldset>
+    <legend>
+    <datalist>
+    <output>
+    <option>
+    <optgroup>
+- Tipos de inputs:
+    <input type="button">
+    <input type="checkbox">
+    <input type="color">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="month">
+    <input type="week">
+    <input type="time">
+    <input type="email">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="number">
+    <input type="password">
+    <input type="radio">
+    <input type="range">
+    <input type="reset">
+    <input type="search">
+    <input type="submit">
+    <input type="tel">
+    <input type="text">
+    <input type="url">
+- Textarea
+- Criar um site empresarial ou página pessoal
+- Responsividade
 
 
 CSS:

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - 2</title>
+</head>
+
+<body>
+    <h1 id="titulo-principal"> Formulários </h1>
+
+    <form oninput="comissao.value=parseInt(valorvenda.value)-parseInt(valorvenda.value)*0.9">
+        <fieldset>
+            <legend>Cálculo de comissão</legend>
+            <br>
+            <label for="valorvenda">Valor Venda</label>
+            <input id="valorvenda" type="number" />
+
+            <br>
+            <label for="comissao">Comissão</label>
+            <output name="comissao" for="valor-venda"></output>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Dados de contato</legend>
+            <label for="email">Email</label>
+            <input list="lista-de-emails" id="email" type="email" />
+
+            <datalist id="lista-de-emails">
+                <option value="flavindopneu@email.com">
+                <option value="doisirmaos@email.com">
+            </datalist>
+
+            <output name="emailoutput" for="email"></output>
+
+            <br>
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" value="Eduardo Roseo" disabled />
+
+            <br>
+            <label for="contato">Contato</label>
+            <input id="contato" type="tel" />
+        </fieldset>
+
+        <fieldset>
+            <legend>O que aconteceu</legend>
+            <label for="relato">Descreva o que houve:</label>
+            <textarea id="relato" rows="5" cols="50"></textarea>
+
+            <br>
+            <button id="btn-add-novo" type="button" onclick="alert('adicionado com sucesso')">Adicionar novo</button>
+
+        </fieldset>
+
+        <br>
+        <label for="linkedin">Sua linkedin</label>
+        <input id="linkedin" type="url" />
+
+        <br>
+        <label for="veiculo">Veículos</label>
+        <select id="veiculo">
+            <optgroup label="Moto">
+                <option value="1">Honda</option>
+                <option value="2">Yamaha</option>
+                <option value="3">Suzuki</option>
+            </optgroup>
+            <optgroup label="Carro">
+                <option selected value="4">Chevrolet</option>
+                <option value="5">Ford</option>
+                <option value="6">Fiat</option>
+            </optgroup>
+        </select>
+
+        <br />
+        <label for="cor">Cor do veículo</label>
+        <input id="cor" type="color" />
+
+        <br />
+        <label for="nascimento">Data de nascimento</label>
+        <input id="nascimento" type="date" />
+
+        <br />
+        <label for="hora-nascimento">Hora de nascimento</label>
+        <input id="hora-nascimento" type="time" />
+
+        <br />
+        <label for="curriculo">Currículo em PDF</label>
+        <input id="curriculo" type="file" accept=".pdf,.jpg" />
+
+        <br />
+        <label for="idade">Idade</label>
+        <input id="idade" min="1" max="10" type="number" />
+
+        <br />
+        <label for="senha">Senha</label>
+        <input id="senha" minlength="6" type="password" />
+
+        <br /><br />
+        <!-- input radio - Tipos de carros -->
+        <input id="fiat-uno" type="radio" name="tipo" value="Fiat Uno" />
+        <label for="fiat-uno">Carros</label>
+        <br />
+        <input id="onix" type="radio" name="tipo" value="Chevrolet Onix" />
+        <label for="onix">Chevrolet Onix</label>
+        <br />
+        <input id="gol" type="radio" name="tipo" value="Volkswagen Gol" />
+        <label for="gol">Volkswagen Gol</label>
+
+        <br />
+        <label for="renda-mensal">Faixa salarial</label>
+        <input id="renda-mensal" min="1000" max="10000" type="range" />
+
+        <br />
+        <label for="termos">Concordo com os termos</label>
+        <input id="termos" type="checkbox" />
+
+        <br />
+        <input type="submit">
+    </form>
+</body>
+
+</html>
