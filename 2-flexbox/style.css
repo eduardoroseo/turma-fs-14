@@ -1,34 +1,40 @@
-/* https://colorhunt.co/palette/0f0e0e5412128b9a46eeeeee */
-:root {
-    --main-bg-color: #EEEEEE;
-    --bg-green: #8B9A46;
-    --bg-red: #541212;
-    --bg-black: #0F0E0E;
-}
-
-body {
-    background-color: var(--main-bg-color);
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 100%;
+    gap: 5px
 }
 
 .bloco {
-    height: 15vh;
-    width: 15vh;
-    border-radius: 16px;
+    height: 200px;
+    width: 80%;
+    background-color: #bcd06c;
+    color: white;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    font-weight: 300;
-    color: #fff;
 }
 
-.bloco-green {
-    background-color: var(--bg-green);
+.bloco-verde-escuro {
+    background-color: #114232;
 }
 
-.bloco-red {
-    background-color: var(--bg-red);
+.bloco-verde-claro {
+    background-color: #87A922;
 }
 
-.bloco-black {
-    background-color: var(--bg-black);
+.bloco-amarelo {
+    background-color: #FCDC2A;
+}
+
+@media (min-width: 768px) {
+    .bloco {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bloco {
+        width: 30%;
+    }
 }
