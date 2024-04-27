@@ -1,0 +1,24 @@
+.bloco {
+    width: 100%;
+    height: 80px;
+}
+
+.vermelho {
+    background-color: rgb(113, 12, 12);
+}
+
+.verde {
+    background-color: rgb(12, 113, 12);
+}
+
+.azul {
+    background-color: rgb(12, 12, 113);
+}
+
+.amarelo {
+    background-color: rgb(113, 113, 12);
+}
+
+.laranja {
+    background-color: rgb(113, 63, 12);
+}
