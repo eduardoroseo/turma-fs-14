@@ -299,8 +299,18 @@ Acesse o endereço `http://localhost:3000` no navegador para visualizar o projet
 1. Crie um programa que exiba a mensagem "Olá, mundo!" no console.
 2. Faça um algoritmo que receba dois números e exiba o resultado da sua soma.
 3. Faça um algoritmo que receba dois números e ao final mostre a soma, subtração, multiplicação e a divisão dos números lidos.
+
 4. Escrever um algoritmo para determinar o consumo médio de um automóvel sendo fornecida a distância total percorrida pelo automóvel e o total de combustível gasto.
+
+
 5. Escrever um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês.
+
+
+
+
+
+
+
 6. Escrever um algoritmo que leia o nome de um aluno e as notas das três provas que ele obteve no semestre. No final informar o nome do aluno e a sua média (aritmética).
 7. Ler dois valores para as variáveis A e B, e efetuar as trocas dos valores de forma que a variável A passe a possuir o valor da variável B e a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
 8. Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9\*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
