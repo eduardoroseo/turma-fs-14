@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <main class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <h4>Escrever um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês. Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="nome-vendedor" class="form-label">Vendedor</label>
+                <input type="text" class="form-control" id="nome-vendedor">
+            </div>
+            <div class="col">
+                <label for="salario-fixo" class="form-label">Salário Fixo</label>
+                <input type="number" class="form-control" id="salario-fixo">
+            </div>
+            <div class="col">
+                <label for="total-em-vendas" class="form-label">Total em vendas</label>
+                <input type="number" class="form-control" id="total-em-vendas">
+            </div>
+            <div class="col d-flex align-items-end">
+                <button id="btn-calcular" class="btn btn-primary">Calcular</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Salário Fixo</th>
+                            <th>Total em vendas</th>
+                            <th>Salário Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-vendedores">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+</body>
+</html>
