@@ -1,5 +1,4 @@
-
-document.getElementById("btn-calcular").addEventListener("click", function() {
+function calcularConsumoMedio () {
     let distaciaTotalInput = document.getElementById("distancia-total")
     let totalCombustivelInput = document.getElementById("total-combustivel")
 
@@ -7,12 +6,22 @@ document.getElementById("btn-calcular").addEventListener("click", function() {
     let totalCombustivel = totalCombustivelInput.value
 
     if (distanciaTotal == '' || distanciaTotal <= 0) {
-        alert("Distância total inválida")
+        let config = {
+            icon: "error",
+            title: "Oops...",
+            text: "Distância total inválida!",
+        }
+
+        Swal.fire(config);
         return
     }
 
     if (!totalCombustivel || totalCombustivel <= 0) {
-        alert("Total do combustível inválido")
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Total do combustível inválido!",
+        });
         return
     }
 
@@ -23,4 +32,12 @@ document.getElementById("btn-calcular").addEventListener("click", function() {
 
     distaciaTotalInput.value = ''
     totalCombustivelInput.value = ''
-})
+}
+
+document.addEventListener('keypress', function(ev) {
+    if (ev.key == "Enter") {
+        calcularConsumoMedio()
+    }
+});
+
+document.getElementById("btn-calcular").addEventListener("click", calcularConsumoMedio)
