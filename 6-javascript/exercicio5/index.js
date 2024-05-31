@@ -56,8 +56,6 @@ function calcularSalarioTotal () {
 function montaTabela() {
     const tabelaVendedores = document.getElementById("tabela-vendedores")
 
-    console.log({vendedores})
-
     const htmlDeVendedores = vendedores.map(function (vendedor) {
         return `
             <tr>
@@ -69,11 +67,7 @@ function montaTabela() {
         `
     })
 
-    console.log({htmlDeVendedores})
-
     const htmlDoTBody = htmlDeVendedores.join("")
-
-    console.log({htmlDoTBody})
 
     tabelaVendedores.innerHTML = htmlDoTBody
 }
