@@ -22,6 +22,9 @@ async function carregarUsuarios() {
 function alimentaTabela(usuarios) {
     const htmlUsuarios = usuarios.map(usuario => `
             <tr>
+                <td>
+                    <img src="${usuario.image}" alt="sem imagem" class="img-thumbnail" style="width: 100px; height: 100px;">
+                </td>
                 <td>${usuario.id}</td>
                 <td>${usuario.nome}</td>
                 <td>${usuario.email}</td>
@@ -38,6 +41,7 @@ async function salvarUsuario() {
     const nome = document.getElementById("nome").value
     const telefone = document.getElementById("telefone").value
     const email = document.getElementById("email").value
+    const image = document.getElementById("image").files[0]
 
     if (!nome) {
         Swal.fire({
@@ -61,23 +65,32 @@ async function salvarUsuario() {
         return;
     }
 
-    const payload = {
-        nome: nome,
-        telefone: telefone,
-        email: email
+    let reader = new FileReader()
+    reader.onload = async function() {
+        const imageBase64 = reader.result
+
+        const payload = {
+            nome: nome,
+            telefone: telefone,
+            email: email,
+            image: imageBase64
+        }
+    
+        const requestOptions = {
+            method: "POST",
+            body: JSON.stringify(payload)
+        };
+    
+        await fetch("http://localhost:3000/usuarios", requestOptions)
+        
+        const modalElement = document.getElementById("modal-usuario");
+        bootstrap.Modal.getInstance(modalElement).hide()
+    
+        carregarUsuarios()
+
     }
 
-    const requestOptions = {
-        method: "POST",
-        body: JSON.stringify(payload)
-    };
-
-    await fetch("http://localhost:3000/usuarios", requestOptions)
-    
-    const modalElement = document.getElementById("modal-usuario");
-    bootstrap.Modal.getInstance(modalElement).hide()
-
-    carregarUsuarios()
+    reader.readAsDataURL(image)
 }
 
 document.addEventListener('DOMContentLoaded', carregarUsuarios)

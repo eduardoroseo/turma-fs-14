@@ -29,6 +29,7 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
+                        <th>Imagem</th>
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Email</th>
@@ -52,6 +53,10 @@
                 </div>
                 <div class="modal-body">
                     <form id="form-usuario">
+                        <div class="mb-3">
+                            <label for="image">Imagem</label>
+                            <input type="file" class="form-control" id="image" name="image">
+                        </div>
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="nome" name="nome">
