@@ -8,19 +8,25 @@
 </head>
 <body>
     <main class="container">
-        <div class="row mt-3">
+        <div class="row mt-3 text-center">
             <div class="col">
-                <h4>Busca de endereço pelo CEP.</h4>
+                <h4>Sistema de controle de usuários.</h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <label for="cep" class="form-label">Informe seu cep</label>
-                <input type="text" class="form-control" id="cep">
-            </div>
-            <div class="col d-flex align-items-end">
-                <button id="btn-busca-cep" class="btn btn-primary">Consultar</button>
-            </div>
+        <div class="row mt-3">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody id="conteudo">
+                    
+                </tbody>
+            </table>
         </div>
         <div class="row mt-4">
             <p id="resultado"></p>

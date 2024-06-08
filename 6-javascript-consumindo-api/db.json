@@ -1,0 +1,19 @@
+{
+  "usuarios": [
+    {
+      "id": "30d5",
+      "nome": "Eduardo Roseo",
+      "email": "eduardoroseo@gmail.com",
+      "telefone": "85988179596"
+    },
+    {
+      "id": "296d",
+      "nome": "José pereira",
+      "email": "jose@gmail.com",
+      "telefone": "85988179596"
+    }
+  ],
+  "carros": [],
+  "motos": [],
+  "flores": []
+}

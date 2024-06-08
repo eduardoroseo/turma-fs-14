@@ -1,31 +1,34 @@
-function buscaCep() {
-    const cep = document.getElementById("cep").value.trim()
+async function carregarUsuarios() {
+    const requestOptions = {
+        method: "GET"
+    };
 
-    if (!cep) {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Cep informado está inválido",
-        })
-        return
-    }
+    document.getElementById('conteudo').innerHTML = `
+        <tr class="text-center">
+            <td colspan="4">Carregando ....</td>
+        </tr>
+    `
+      
+    const response = await fetch("http://localhost:3000/usuarios", requestOptions)
+    const usuarios = await response.json();
 
-    document.getElementById("resultado").innerHTML = "CARREGANDO ..."
-    fetch(`https://viacep.com.br/ws/${cep}/json`)
-        .then(function (response) {
-            console.log("PRIMEIRA RESPOSTA")
-            console.log(response)
-
-            return response.json()
-        })
-        .then(function(resposta) {
-            console.log("SEGUNDA RESPOSTA")
-            console.log(resposta)
-
-
-            document.getElementById("resultado").innerHTML = 
-                `O nome da rua é ${resposta.logradouro} no bairro ${resposta.bairro} na cidade de ${resposta.localidade} do estado do ${resposta.uf}.`
-        })
+    alimentaTabela(usuarios);
 }
 
-document.getElementById('btn-busca-cep').addEventListener('click', buscaCep)
+function alimentaTabela(usuarios) {
+    const htmlUsuarios = usuarios.map(usuario => {
+        return `
+            <tr>
+                <td>${usuario.id}</td>
+                <td>${usuario.nome}</td>
+                <td>${usuario.email}</td>
+                <td>${usuario.telefone}</td>
+            </tr>
+        `
+    })
+
+    const htmlConteudo = htmlUsuarios.join("");
+    document.getElementById('conteudo').innerHTML = htmlConteudo
+}
+
+document.addEventListener('DOMContentLoaded', carregarUsuarios)
