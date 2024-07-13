@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 const Menu = () => {
   return (
     <header>
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Digital College</Navbar.Brand>
           <Nav className="me-auto">

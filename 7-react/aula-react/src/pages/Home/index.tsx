@@ -1,7 +1,9 @@
+import ContentHeader from "../../components/ContentHeader";
+
 const Home = () => {
   return (
     <div>
-      <h1>Bem-vindo</h1>
+      <ContentHeader title="Home" />
     </div>
   );
 };

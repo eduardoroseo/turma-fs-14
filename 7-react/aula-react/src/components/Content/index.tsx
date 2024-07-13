@@ -6,7 +6,7 @@ type ContentProps = {
 
 const Content = ({ children }: ContentProps) => {
   return (
-    <main>
+    <main className="mt-2 p-3">
       <Container>{children}</Container>
     </main>
   );
