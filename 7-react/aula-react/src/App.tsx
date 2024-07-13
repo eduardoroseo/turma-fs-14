@@ -1,35 +1,16 @@
-import { useState } from "react";
-import "./App.css";
-import Hello from "./components/Hello";
+import { Button } from "react-bootstrap";
+import { ButtonDanger } from "./components/Buttons";
 
 const App = () => {
-  const [nome, setNome] = useState("Edu");
-  const [pessoas, setPessoas] = useState<string[]>([]);
-
-  function addPessoa(nome: string) {
-    setPessoas([...pessoas, nome]);
-  }
-
   return (
-    <>
-      <input
-        type="text"
-        value={nome}
-        onKeyDown={(e) => {
-          if (e.key == "Enter") {
-            addPessoa(nome);
-            setNome("");
-          }
-        }}
-        onChange={(e) => setNome(e.target.value)}
-      />
-      <Hello nome={nome} />
-      <ul>
-        {pessoas.map((nomeFulano, index) => (
-          <li key={index}>{nomeFulano}</li>
-        ))}
-      </ul>
-    </>
+    <div className="container">
+      <Button variant="success">Clique aqui</Button>
+      <Button variant="warning">Clique aqui</Button>
+      <ButtonDanger onClick={() => alert("perigo")}>Clique aqui</ButtonDanger>
+      <ButtonDanger onClick={() => alert("não tao perigo assim")}>
+        Clique aqui
+      </ButtonDanger>
+    </div>
   );
 };
 
