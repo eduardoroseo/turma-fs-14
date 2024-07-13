@@ -1,16 +1,16 @@
-import { Button } from "react-bootstrap";
-import { ButtonDanger } from "./components/Buttons";
+import Container from "./components/Container";
+import Content from "./components/Content";
+import Menu from "./components/Menu";
+import Users from "./pages/Users";
 
 const App = () => {
   return (
-    <div className="container">
-      <Button variant="success">Clique aqui</Button>
-      <Button variant="warning">Clique aqui</Button>
-      <ButtonDanger onClick={() => alert("perigo")}>Clique aqui</ButtonDanger>
-      <ButtonDanger onClick={() => alert("não tao perigo assim")}>
-        Clique aqui
-      </ButtonDanger>
-    </div>
+    <Container>
+      <Menu />
+      <Content>
+        <Users />
+      </Content>
+    </Container>
   );
 };
 
