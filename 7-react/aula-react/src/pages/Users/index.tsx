@@ -24,6 +24,11 @@ const Users = () => {
             <td>maria@gmail.com</td>
             <td>(11) 99999-9999</td>
           </tr>
+          <tr>
+            <td>Pedro</td>
+            <td>pedro@gmail.com</td>
+            <td>(11) 99999-9999</td>
+          </tr>
         </tbody>
       </Table>
     </div>
