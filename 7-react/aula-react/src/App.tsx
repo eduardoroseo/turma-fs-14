@@ -10,6 +10,9 @@ const App = () => {
       <Content>
         <Users />
       </Content>
+      <div className="text-center">
+        <small>© 2024 - Digital College</small>
+      </div>
     </Container>
   );
 };

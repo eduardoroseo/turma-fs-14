@@ -1,9 +1,26 @@
+import { useEffect, useState } from "react";
 import ContentHeader from "../../components/ContentHeader";
 import Table from "../../components/Table";
+import { api } from "../../utils/api";
+
+type User = {
+  id?: string;
+  name: string;
+  email: string;
+  phone: string;
+};
 
 const Users = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    api.get(`/usuarios`).then((response) => {
+      setUsers(response.data);
+    });
+  }, []);
+
   return (
-    <div>
+    <div className={""}>
       <ContentHeader title="Usuários" />
       <Table>
         <thead>
@@ -14,21 +31,13 @@ const Users = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>João</td>
-            <td>joao@gmail.com</td>
-            <td>(11) 99999-9999</td>
-          </tr>
-          <tr>
-            <td>Maria</td>
-            <td>maria@gmail.com</td>
-            <td>(11) 99999-9999</td>
-          </tr>
-          <tr>
-            <td>Pedro</td>
-            <td>pedro@gmail.com</td>
-            <td>(11) 99999-9999</td>
-          </tr>
+          {users.map((user: User) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.phone}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>
