@@ -1,7 +1,7 @@
 import { ButtonChildren } from "../types";
 
-const ButtonSuccess = ({ children }: ButtonChildren) => {
-  return <button className="btn btn-success">{children}</button>;
+const ButtonSuccess = ({ children, onClick, disabled }: ButtonChildren) => {
+  return <button onClick={onClick} disabled={disabled} className="btn btn-success">{children}</button>;
 };
 
 export default ButtonSuccess;

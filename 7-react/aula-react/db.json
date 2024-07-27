@@ -1,11 +1,65 @@
 {
-    "usuarios": [
-        {
-            "id": 1,
-            "name": "João",
-            "email": "joao@gmail.com",
-            "phone": "123456789"
-        }
-    ],
-    "remedios": []
+  "usuarios": [
+    {
+      "id": "1",
+      "name": "João",
+      "email": "joao@gmail.com",
+      "phone": "123456789"
+    },
+    {
+      "id": "7f85",
+      "name": "João Souza Silva",
+      "email": "souza@gmail.com",
+      "phone": "3121286800"
+    },
+    {
+      "id": "76f3",
+      "name": "Juan Francisco García Flores",
+      "email": "chico@gmail.com",
+      "phone": "5553428400"
+    },
+    {
+      "id": "3318",
+      "name": "João Souza Silva",
+      "email": "joao2@gmail.com",
+      "phone": "3121286800"
+    },
+    {
+      "id": "3bc9",
+      "name": "eduardo",
+      "email": "eduardo@gmail.com",
+      "phone": "23123123123"
+    },
+    {
+      "id": "a728",
+      "name": "Eduardo",
+      "email": "eduardo3@gmai.com",
+      "phone": "123123123123"
+    },
+    {
+      "id": "3424",
+      "name": "Eduardo4",
+      "email": "edu@gmail.com",
+      "phone": "123123123123"
+    },
+    {
+      "id": "a425",
+      "name": "Jon Stewart Doe",
+      "email": "jon@snow.com",
+      "phone": "6019521325"
+    },
+    {
+      "id": "20f1",
+      "name": "Eduardo5",
+      "email": "eduardo5@gmail.com",
+      "phone": "213123123"
+    },
+    {
+      "id": "f1f6",
+      "name": "Juan Francisco García Flores",
+      "email": "ruan@mexico.com",
+      "phone": "5553428400"
+    }
+  ],
+  "remedios": []
 }
