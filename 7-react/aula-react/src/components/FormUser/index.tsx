@@ -1,15 +1,12 @@
 import { Button, Modal } from "react-bootstrap";
 import { ButtonSuccess } from "../Buttons";
 import { useState } from "react";
-import { api } from "../../utils/api";
+import { useUser } from "../../hooks/userProvider";
 
-type FormUserProps = {
-  carregarUsuarios: () => void;
-};
-
-const FormUser = ({ carregarUsuarios }: FormUserProps) => {
+const FormUser = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { salvarUsuario } = useUser();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +16,7 @@ const FormUser = ({ carregarUsuarios }: FormUserProps) => {
     setShow(false);
   };
 
-  const salvarUsuario = async () => {
+  const onClick = async () => {
     setLoading(true);
     const dadosParaApi: User = {
       name: name,
@@ -27,15 +24,9 @@ const FormUser = ({ carregarUsuarios }: FormUserProps) => {
       phone: phone,
     };
 
-    // mock api time 400ms
-    await new Promise((resolve) => setTimeout(resolve, 4000));
-
-    await api.post("usuarios", dadosParaApi);
-
+    await salvarUsuario(dadosParaApi);
     setShow(false);
     setLoading(false);
-
-    carregarUsuarios();
   };
 
   return (
@@ -108,7 +99,7 @@ const FormUser = ({ carregarUsuarios }: FormUserProps) => {
           <Button variant="secondary" onClick={fecharModal}>
             Cancelar
           </Button>
-          <ButtonSuccess disabled={loading} onClick={salvarUsuario}>
+          <ButtonSuccess disabled={loading} onClick={onClick}>
             Salvar
           </ButtonSuccess>
         </Modal.Footer>

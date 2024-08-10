@@ -1,25 +1,10 @@
-import { useEffect, useState } from "react";
 import ContentHeader from "../../components/ContentHeader";
 import Table from "../../components/Table";
 import FormUser from "../../components/FormUser";
-import { api } from "../../utils/api";
+import { useUser } from "../../hooks/userProvider";
 
 const Users = () => {
-  const [users, setUsers] = useState([]);
-  const [ultimoUsuario, setUltimoUsuario] = useState("");
-
-  useEffect(() => {
-    console.log("carregando os usuários");
-    carregarUsuarios();
-  }, []);
-
-  const carregarUsuarios = async () => {
-    const responseAxios = await api.get("usuarios");
-    const usuariosApi = responseAxios.data;
-
-    setUsers(usuariosApi);
-    setUltimoUsuario(usuariosApi[usuariosApi.length - 1].name);
-  };
+  const { qtdUsers, users, ultimoUsuario } = useUser();
 
   return (
     <div className={""}>
@@ -46,11 +31,11 @@ const Users = () => {
       </Table>
       <div className="row">
         <div className="col-6">
-          <p>Quantidade de usuários: {users.length}</p>
+          <p>Quantidade de usuários: {qtdUsers}</p>
           <p>Último usuário registrado: {ultimoUsuario}</p>
         </div>
       </div>
-      <FormUser carregarUsuarios={carregarUsuarios} />
+      <FormUser />
     </div>
   );
 };
