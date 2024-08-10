@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import ContentHeader from "../../components/ContentHeader";
 import Table from "../../components/Table";
-import { api } from "../../utils/api";
 import FormUser from "../../components/FormUser";
+import { api } from "../../utils/api";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [ultimoUsuario, setUltimoUsuario] = useState("");
 
   useEffect(() => {
-    console.log("carregando os usuários")
-    carregarUsuarios()
+    console.log("carregando os usuários");
+    carregarUsuarios();
   }, []);
 
   const carregarUsuarios = async () => {
-    const responseAxios = await api.get("/usuarios");
-    const usuariosApi = responseAxios.data
-    
+    const responseAxios = await api.get("usuarios");
+    const usuariosApi = responseAxios.data;
+
     setUsers(usuariosApi);
-    setUltimoUsuario(usuariosApi[usuariosApi.length - 1].name)
-  }
+    setUltimoUsuario(usuariosApi[usuariosApi.length - 1].name);
+  };
 
   return (
     <div className={""}>
