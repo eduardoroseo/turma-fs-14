@@ -34,6 +34,7 @@ const FormUser = () => {
     formState: { errors },
     reset,
   } = useForm<FormData>({
+    // @ts-expect-error Erro de tipagem
     resolver: yupResolver(schema),
   });
 
