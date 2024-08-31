@@ -3,4 +3,5 @@ declare type User = {
   name: string;
   email: string;
   phone: string;
+  foto?: string;
 };

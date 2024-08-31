@@ -13,6 +13,7 @@ const Users = () => {
         <thead>
           <tr>
             <th>ID</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>Email</th>
             <th>Telefone</th>
@@ -22,6 +23,17 @@ const Users = () => {
           {users.map((user: User, index) => (
             <tr key={index}>
               <td>{user.id}</td>
+              <td>
+                {user.foto ? (
+                  <img
+                    src={user.foto}
+                    alt={user.name}
+                    style={{ width: "100px" }}
+                  />
+                ) : (
+                  "Sem foto"
+                )}
+              </td>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.phone}</td>

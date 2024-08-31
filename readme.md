@@ -1,5 +1,10 @@
-# MISSÃO DA SEMANA
+# TRABALHO DE CONCLUSÃO - ETAPA FRONT-END
 
 ## Objetivo
 
-- Fazer os exercícios da pasta [6-javascript-consumindo-api](./6-javascript-consumindo-api).
+Criar um sistema que criará uma landing page que irá apresentar as propostas de um candidato.
+
+## Requisitos
+
+- Todo o conteúdo da página será alimentada por API
+- O conteúdo 

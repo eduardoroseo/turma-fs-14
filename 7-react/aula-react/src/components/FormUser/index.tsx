@@ -13,12 +13,14 @@ const schema = yup.object({
     .required("O email é obrigatório")
     .email("O campo email, precisa ser válido"),
   phone: yup.string().required("O telefone é obrigatório"),
+  foto: yup.object().required("A foto é obrigatória"),
 });
 
 type FormData = {
   name: string;
   email: string;
   phone: string;
+  foto: FileList;
 };
 
 const FormUser = () => {
@@ -43,7 +45,21 @@ const FormUser = () => {
     console.log(formData);
     setLoading(true);
 
-    await salvarUsuario(formData);
+    const novoUsuario: User = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      foto: "",
+    };
+
+    const reader = new FileReader();
+    reader.readAsDataURL(formData.foto[0] as Blob);
+
+    reader.onloadend = async () => {
+      novoUsuario.foto = reader.result as string;
+    };
+
+    await salvarUsuario(novoUsuario);
     setShow(false);
     setLoading(false);
     reset();
@@ -69,6 +85,30 @@ const FormUser = () => {
           </Modal.Header>
           <Modal.Body>
             <div className="row">
+              <div className="mb-3">
+                <label htmlFor="foto" className="form-label">
+                  Foto do perfil
+                </label>
+                <input
+                  {...register("foto")}
+                  type="file"
+                  accept="image/*"
+                  className={
+                    errors?.foto?.message
+                      ? "form-control is-invalid"
+                      : "form-control"
+                  }
+                  id="foto"
+                  aria-describedby="nomeHelp"
+                />
+                {errors?.foto?.message ? (
+                  <div className="invalid-feedback">{errors.foto.message}</div>
+                ) : (
+                  <div id="nomeHelp" className="form-text">
+                    Faça o upload da foto do usuário.
+                  </div>
+                )}
+              </div>
               <div className="mb-3">
                 <label htmlFor="nome" className="form-label">
                   Nome
